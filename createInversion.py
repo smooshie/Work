@@ -33,11 +33,11 @@ def main():
     indexes = open("indexes.txt", "w")
     for i in range (1, 2000000):
         if i % 10000 == 0:
-            reversd = rc(seq[i:i+5])
-            indexes.write("from " + str(i) + " took " + str(seq[i:i+5]) + " --> " + str(i-20) + "-" + str(i-18) + " inserted " + reversd + " \n")
-            seq.pop(i-20)
-            seq.pop(i-19)
-            seq.insert(i-21, reversd)
+            reversd = rc(seq[i:i+30])
+            indexes.write("from " + str(i) + " took " + str(seq[i:i+30]) + " --> " + str(i-200) + "-" + str(i-180) + " inserted " + reversd + " \n")
+            seq.pop(i-200)
+            seq.pop(i-190)
+            seq.insert(i-210, reversd)
         
     
     done = open("human_altered.fas", "w")
